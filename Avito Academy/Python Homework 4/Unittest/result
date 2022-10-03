@@ -1,0 +1,59 @@
+Пример неверного теста:
+
+C:\Users\User\PycharmProjects\AvitoAcademy>python -m unittest AAA_HW4_Python_unittest.py
+[('A', [0, 0, 0, 1]), ('B', [0, 0, 1, 0]), ('C', [0, 1, 0, 0]), ('D', [1, 0, 0, 0]), ('B', [0, 0, 1, 0])]
+F
+======================================================================
+FAIL: test_letters (AAA_HW4_Python_unittest.TestCountLetters)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\AvitoAcademy\AAA_HW4_Python_unittest.py", line 15, in test_letters
+    self.assertEqual(actual, expected)
+AssertionError: Lists differ: [('A', [0, 0, 0, 1]), ('B', [0, 0, 1, 0]), ('C', [0, 1,[45 chars] 0])] != [('A', [0, 0, 1]), ('B', [0, 1, 0]), ('C', [0, 0, 1]), [30 chars] 0])]
+
+First differing element 0:
+('A', [0, 0, 0, 1])
+('A', [0, 0, 1])
+
+- [('A', [0, 0, 0, 1]),
+?              ---
+
++ [('A', [0, 0, 1]),
+-  ('B', [0, 0, 1, 0]),
+?            ---
+
++  ('B', [0, 1, 0]),
+-  ('C', [0, 1, 0, 0]),
+?            ---   ^
+
++  ('C', [0, 0, 1]),
+?               ^
+
+-  ('D', [1, 0, 0, 0]),
+?              ---
+
++  ('D', [1, 0, 0]),
+-  ('B', [0, 0, 1, 0])]
+?            ---
+
++  ('B', [0, 1, 0])]
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+FAILED (failures=1)
+
+
+
+
+Прошедшие тесты:
+C:\Users\User\PycharmProjects\AvitoAcademy>python -m unittest AAA_HW4_Python_unittest.py
+[('A', [0, 0, 0, 1]), ('B', [0, 0, 1, 0]), ('C', [0, 1, 0, 0]), ('D', [1, 0, 0, 0]), ('B', [0, 0, 1, 0])]
+.[('', [1])]
+.[('', [1])]
+.[('pot', [0, 0, 0, 0, 1]), ('pasta', [0, 0, 0, 1, 0]), ('boil', [0, 0, 1, 0, 0]), ('again', [0, 1, 0, 0, 0]), ('pomodoro', [1, 0, 0, 0, 0]), ('pasta', [0, 0, 0, 1, 0]), ('pomodoro', [1, 0, 0, 0, 0])]
+.
+----------------------------------------------------------------------
+Ran 4 tests in 0.002s
+
+OK
