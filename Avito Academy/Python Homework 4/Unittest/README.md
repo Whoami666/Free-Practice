@@ -4,7 +4,11 @@
 Запускаем отдельный тест pasta_pomodoro
 ![image](https://user-images.githubusercontent.com/20105337/193669382-0c98d31e-f9b3-48c0-a87b-7af7a4fa78fc.png)
 
-
+ 
+  
+   
+    
+     
 
 
 Как не получилось запустить:
