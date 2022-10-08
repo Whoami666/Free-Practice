@@ -14,7 +14,7 @@ class CountVectorizer:
     def fit_transform(self, text_corpus: list) -> list:
         self.corpus = text_corpus
         features = self.get_features(text_corpus)
-        term_matrix = [[0 for i in range(len(features))] for j in range(len(text_corpus))]
+        term_matrix = [[0 for _ in range(len(features))] for _ in range(len(text_corpus))]
 
         for k in range(len(text_corpus)):
             for word in text_corpus[k].split():
@@ -28,13 +28,14 @@ class CountVectorizer:
         return self.get_features(self.corpus)
 
 
-corpus = [
-    'Crock Pot Pasta Never boil pasta again',
-    'Pasta Pomodoro Fresh ingredients Parmesan to taste'
-]
+if __name__ == '__main__':
+    corpus = [
+        'Crock Pot Pasta Never boil pasta again',
+        'Pasta Pomodoro Fresh ingredients Parmesan to taste'
+    ]
 
-vectorizer = CountVectorizer()
-count_matrix = vectorizer.fit_transform(corpus)
+    vectorizer = CountVectorizer()
+    count_matrix = vectorizer.fit_transform(corpus)
 
-print(vectorizer.get_feature_names())
-print(count_matrix)
+    print(vectorizer.get_feature_names())
+    print(count_matrix)
