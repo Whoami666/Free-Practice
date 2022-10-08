@@ -51,9 +51,10 @@ class MyClass(ColorizeMixin):
         return f"\33[{self.repr_color}m{self.title} | {self.price} ₽"
 
 
-a = MyClass(json_str)
-print(a.title)
-print(a.location.address)
+if __name__ == '__main__':
+    a = MyClass(json_str)
+    print(a.title)
+    print(a.location.address)
 
-iphone_ad = MyClass('iPhone X', 100)
-print(iphone_ad.repr())
+    iphone_ad = MyClass('iPhone X', 100)
+    print(iphone_ad.repr())
