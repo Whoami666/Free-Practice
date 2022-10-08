@@ -1,0 +1,31 @@
+Trying:
+    encode('J')
+Expecting:
+    '.---'
+ok
+Trying:
+    encode('абоба')
+Expecting:
+    Traceback (most recent call last):
+    ...
+    KeyError: 'а'
+ok
+Trying:
+    encode('Z')
+Expecting:
+    '--..'
+ok
+Trying:
+    encode('SOS')
+Expecting:
+    '... --- ...'
+ok
+2 items had no tests:
+    __main__
+    __main__.decode
+1 items passed all tests:
+   4 tests in __main__.encode
+4 tests in 3 items.
+4 passed and 0 failed.
+Test passed.
+MAI-PYTHON-2019
